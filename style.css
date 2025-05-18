@@ -1,0 +1,316 @@
+body {
+    font-family: "Game Font", "Arial Rounded MT Bold", sans-serif;
+    background-color: #dde9ff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 37.5px auto;
+    padding: 25px;
+}
+.title {
+    color: #FF8C00;
+    font-size: 60px;
+    margin-bottom: 18.75px;
+    margin-top: 5px;
+    text-shadow: 2.5px 2.5px 0px white;
+    transition: text-shadow 0.3s ease;
+}
+.instructions {
+    text-align: left;
+    font-size: 20px;
+    color: #486bac;
+    transition: color 0.3s ease;
+    margin-left: 5%;
+    margin-right: 65px;
+    margin-bottom: 65px;
+    max-height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 10px;
+    direction: rtl;
+}
+.instructions > * {
+    direction: ltr;
+}
+.instructions * {
+    margin-left: 5%
+}
+
+.head-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+.icon-buttons {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-buttons img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.2s ease, filter 0.3s ease;
+}
+.icon-buttons:hover img {
+    transform: scale(1.1);
+    filter: invert(0.2);
+}
+.light-filter {
+    filter: invert(0);
+}
+.dark-filter {
+    filter: invert(1);
+}
+
+.info-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+.info-menu.show {
+    opacity: 1;
+    pointer-events: all;
+}
+.info-menu-content {
+    position: relative;
+    background: #dde9ff;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+}
+.info-menu.show .info-menu-content {
+    transform: scale(1);
+}
+.info-title {
+    margin-top: 5px;
+}
+.info-close-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.settings label {
+    font-size: 20px;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+.dropdown, .input-box {
+    background-color: white;
+    padding: 6.25px;
+    font-size: 17.5px;
+    width: 125px;
+    text-align: center;
+    border-radius: 6.25px;
+    border: none;
+    font-family: "Game Font", "Arial Rounded MT Bold", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.unknown {
+    font-family: "Unifraktur Maguntia";
+    font-weight: 900;
+    background-color: #ccc;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    margin: 18.75px auto;
+}
+.grid {
+    display: grid;
+    gap: 6.25px;
+}
+.cell {
+    width: 62.5px;
+    height: 62.5px;
+    border-radius: 6.25px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: "Game Font", "Arial Rounded MT Bold", sans-serif;
+    font-weight: bold;
+    background: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+.cell input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Game Font", "Arial Rounded MT Bold", sans-serif;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 1;
+}
+.cell-indicator {
+    width: 12.8%;
+    height: 85%;
+    background: #dde9ff;
+    border-radius: 17.5%;
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: background-color 0.3s ease;
+}
+/* .cell-indicator {
+    width: 25px;
+    height: 25px;
+    background: #dde9ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+} */
+
+.work-buttons button {
+    position: relative;
+    color: white;
+    border: none;
+    padding: 12.5px 25px;
+    font-size: 22.5px;
+    cursor: pointer;
+    margin-top: 18.75px;
+    border-radius: 6.25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-size: 30px 30px;
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    font-family: "Game Font", "Arial Rounded MT Bold", sans-serif;
+    padding-left: 50px;
+}
+.search-btn {
+    background-color: #FF8C00;
+    background-image: url('images/icons/search.png');
+}
+.search-btn:hover {
+    background-color: #ffa93f;
+    transform: scale(1.1);
+}
+.clear-btn {
+    background-color: #D9534F;
+    background-image: url('images/icons/clear.png');
+    margin-left: 12.5px;
+}
+.clear-btn:hover {
+    background-color: #dd817e;
+    transform: scale(1.1);
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.results-container {
+    text-align: left;
+    margin-top: 18.75px;
+}
+.results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.results-header p {
+    font-size: 20px;
+    color: #000000;
+    transition: color 0.3s ease;
+    margin: 0;
+}
+.results {
+    background: white;
+    padding: 12.5px;
+    height: calc(5 * 40px + 15px);
+    border-radius: 6.25px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+    max-width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+}
+.word {
+    background: #FF8C00;
+    color: #FFF4D9;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.color-changer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: auto;
+    z-index: 1;
+    opacity: 0;
+}
+
+@font-face {
+    font-family: "Game Font";
+    src: url("fonts/comic-sans-ms.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Unifraktur Maguntia";
+    src: url("fonts/unifraktur-maguntia.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

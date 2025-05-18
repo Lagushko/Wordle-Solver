@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Solver</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="images/icon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">WORDLE SOLVER</h1>
+        <div class="head-buttons">
+            <button class="icon-buttons light-btn"><img src="images/buttons/light-mode.png" alt="Switch Light"></button>
+            <button class="icon-buttons info-btn" ><img src="images/buttons/info.png" alt="Information"></button>
+        </div>
+        <div class="settings">
+            <div>
+                <label>Language</label><br>
+                <select class="dropdown">
+                    <option>English</option>
+                    <option>Russian</option>
+                    <option>Ukrainian</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+            </div>
+            <div>
+                <label>Letters</label><br>
+                <input placeholder="Number" type="number" class="input-box" min="1" max="20">
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid"></div>
+        </div>
+        <div class="work-buttons">
+            <button class="search-btn">Search</button>
+            <button class="clear-btn">Clear</button>
+        </div>
+        <div class="results-container">
+            <div class="results-header">
+                <p>Found words (0):</p>
+                <button class="icon-buttons download-btn"><img src="images/buttons/download.png" alt="Download"></button>
+            </div>
+            <div class="results"></div>
+        </div>
+        <br>
+        <p class="copy-mark">&copy; <span class="current-year"></span> Wordle Solver</p>
+    </div>
+    <div class="info-menu">
+        <div class="info-menu-content">
+            <h1 class="info-title">Information</h1>
+            <div class="instructions">
+                <p>Instructions:</p>
+                <ol>
+                    <li>Choose a language</li>
+                    <li>Choose number of letters</li>
+                    <li>Enter all your ready guesses</li>
+                    <li>Left click on the cell to change color</li>
+                    <li>Click search button to see results</li>
+                    <li>Blue results are the best for next guess</li>
+                </ol>
+                <p>To not overload website, search limit is 1,000 words <br>
+                    If you want to see all words, click download file button</p>
+                <p>Only information is provided for using the site, which is an solver for the Wordle game <br>
+                    For a complete understanding, it is recommended to read the rules of original game</p>
+                <p>Contact: lyagushkeee@gmail.com</p>
+            </div>
+            <button class="icon-buttons info-close-btn"><img src="images/buttons/close.png" alt="Close"></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
